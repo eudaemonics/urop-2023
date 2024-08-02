@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+
+
+<title>Sexism, Streamers, and Simulated Avatars</title>
+
+
+
+
+
+
+<style>
+@page {
+size: 48in 36in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 30pt;
+width: 48in;
+height: 36in;
+padding: 0;
+text-align: justify;
+font-family: Open Sans;
+}
+.poster_wrap {
+width: 48in;
+height: 36in;
+padding: 0cm;
+}
+.title_container {
+width: 48in;
+height: calc(36in * 0.15);
+overflow: hidden;
+background-color: #49406E;
+border: 0 solid #FFC629;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #49406E;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #49406E;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Raleway;
+}
+/* unvisited link */
+a:link {
+color: #829CE5;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #829CE5;
+}
+
+/* mouse over link */
+a:hover {
+color: #829CE5;
+}
+
+/* selected link */
+a:active {
+color: #829CE5;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dotted;
+-moz-column-rule-style: dotted;
+column-rule-style: dotted;
+-webkit-column-rule-color: #49406E;
+-moz-column-rule-color: #49406E;
+column-rule-color: #49406E;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 120pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(48in + 0 + 0);
+height: calc(36in * 0.83);
+padding-top: calc(36in * 0.005);
+padding-bottom: calc(36in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #FFC629;
+font-size: 45pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: ;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 40pt;
+border: 2mm solid #49406E;
+background-color: #49406E;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #FFC62924;
+color: #49406E;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src= 'https:/cdn.discordapp.com/attachments/630951620091576342/1104224381917470780/UROP-Logo-UCI-Blue-Letters.png' style="width: 80%">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Sexism, Streamers, and Simulated Avatars</h1>
+<h3 id="author">Cosette “Coventine” Ong (Researcher, School of Social Sciences)<sup></sup>, <br>Katie Salen Tekinbaş (Faculty Advisor, School of Informatics)<sup></sup></h3><br>
+
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+<img src=https:/upload.wikimedia.org/wikipedia/en/thumb/0/0e/University_of_California%2C_Irvine_seal.svg/300px-University_of_California%2C_Irvine_seal.svg.png style="width: 80%">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<style type="text/css">
+p.caption {
+ margin-top: 0;
+ margin-bottom: 0;
+ font-size: 24pt;
+ /*font-style: italic;*/
+}
+
+img {
+margin-top: 1pt;
+margin-bottom: 0;
+}
+
+/*.title_container{
+padding: 10px 15px;
+}
+
+#title{
+text-align:left;
+float:left;
+}
+
+#author{
+text-align:left;
+float:left;
+}*/
+
+hr{
+  width: 25%;
+}
+
+</style>
+<div id="i.-background" class="section level1">
+<h1><strong>I. BACKGROUND</strong></h1>
+<center>
+<div class="figure">
+<img src="https://cdn.discordapp.com/attachments/630951620091576342/1104224382202679406/vtuber_figure.png" style="width:90.0%" alt="" />
+<p class="caption">A selection of women livestreamers and VTubers. From left to right: The VTubers Kizuna AI and Ironmouse and the real-person streamers Snapscube and Pokimane.</p>
+</div>
+</center>
+<hr />
+<div class="line-block">Livestreaming has expanded greatly in the last decade as a medium of entertainment and community growth. Accompanying its growth is the trend of Virtual YouTubers beginning with the debut of Kizuna AI in 2016. Virtual YouTubers are referred to colloquially as <strong>VTubers</strong> and are livestreamers that use 2D or 3D avatars and face-tracking technology to communicate with and entertain their audience.<br />
+   VTubers use a simulated avatar instead of a camera and are operated by a real person – a <strong>nakanohito</strong>. Their audience only interacts with the avatar and with this imbalance in mind, we set out to answer the following questions:</div>
+<ol style="list-style-type: decimal">
+<li><strong>How is sexism experienced differently by real-person streamers and VTubers?</strong></li>
+<li><strong>What factors contribute to these differences in experience?</strong></li>
+</ol>
+</div>
+<div id="ii.-significance" class="section level1">
+<h1><strong>II. SIGNIFICANCE</strong></h1>
+Streaming plays an important role in the modern Internet as a method of communication and entertainment. The recent COVID-19 pandemic has emphasized its importance by connecting people across time and space during a time when many were isolated.
+<center>
+<div class="figure">
+<img src="https://cdn.discordapp.com/attachments/630951620091576342/1100582068058075146/finana.png" style="width:60.0%" alt="" />
+<p class="caption">The Nijisanji VTuber Finana Ryugu playing a game on a livestream.</p>
+</div>
+</center>
+<hr />
+<p>VTubers first appeared in 2016 and they are an evolution of how we use avatars to communicate in a digital medium and a new way to stand out in the oversaturated <strong>attention economy</strong>. Understanding how an audience interacts with the avatar without seeing the nakanohito is necessary as the real and digital worlds becoming increasingly intertwined.</p>
+</div>
+<div id="iii.-findings" class="section level1">
+<h1><strong>III. FINDINGS</strong></h1>
+<center>
+<div class="figure">
+<img src="https://cdn.discordapp.com/attachments/630951620091576342/1105005489873485854/double_bind_figure.png" style="width:65.0%" alt="" />
+<p class="caption">The double bind of streaming as a VTuber or a real-person streamer.</p>
+</div>
+<hr />
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1.5em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#C99CE6;overflow:visible;position:relative;"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg> <strong>Real-person streamers and VTubers are both targeted by ambivalent sexism, but VTubers seem to be treated more favorably than their real-person counterparts when they conform to audience and gendered expectations. However, they are targeted by hostile sexism if they deviate from expectations.</strong>
+</center>
+</div>
+<div id="iv.-discussion" class="section level1">
+<h1><strong>IV. DISCUSSION</strong></h1>
+<p><svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1.2em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#8DA5E7;overflow:visible;position:relative;"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg> VTubers’ behaviors were seen as more endearing or positive even when their actions were identical to real-person counterparts.<br>
+<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1.2em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#8DA5E7;overflow:visible;position:relative;"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg> Because they are seen as fictional, female VTubers are not seen as invaders in spaces belonging to gamers.<br>
+<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1.2em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#D9618C;overflow:visible;position:relative;"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM472 200H616c13.3 0 24 10.7 24 24s-10.7 24-24 24H472c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/></svg> VTubers <em>are</em> targeted if they deviate in a way that is incongruent with their avatar’s established character or if they deviate from standards in a way their audience disapproves of.<br>
+<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1.2em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#D9618C;overflow:visible;position:relative;"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM472 200H616c13.3 0 24 10.7 24 24s-10.7 24-24 24H472c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/></svg> Real-person streamers are judged more negatively than their VTuber counterparts regardless of if they conform or deviate from gendered expectations.</p>
+<p>The amount of <strong>affective and emotional labor</strong> that streamers need to be successful is amplified when a streamer is a woman. Moderating one’s appearance and engaging their audience in a warm and welcoming manner to foster <strong>parasocial relationships</strong> between the audience and the streamer is vital to a streamer’s success. However, female streamers are in a <strong>double bind</strong> where they are are judged regardless of how they behave and perform on camera.</p>
+<p>VTubers do not show their face to their audience, but there is still an imbalance because the audience is in a PSR with the avatar and not the nakanohito. Violating an audience’s expectations can lead to a VTuber being targeted by hostile sexism.</p>
+<!--
+Women have played a significant role in streaming but are held to higher standards than their male counterparts. On streaming platforms such as Twitch and YouTube, it's common for gaming skills to be assumed based on gender. Streaming as a full-time career depends almost entirely on **affective and emotional labor** and more labor is expected of women. Some female streamers that stream full-time are assumed to be cold or unfriendly if they do not dress properly, do not wear makeup, or do not address their audience in a warm and welcoming manner. 
+
+VTubers can be of any gender, but female avatars have much more freedom. Some viewers feel inclined to tip VTubers than real streamers because they find real-person streamers self-centered. VTubers only exist in the digital realm, so there is more of a disconnect between reality and the virtual. **Parasocial relationships and interactions** are fundamental to sustain all streaming careers an audience has a PSR with the *avatar* and not the nakanohito when it comes to VTubers.
+
+Unlike real-person streamers who are in a **double bind** where they are punished by their audience regardless of their behavior, female VTubers have much more freedom to act how they want. Their audience seems more likely to attribute their behavior to their persona as an avatar rather than the nakanohito's personality and true opinions. A woman choosing to be on camera means she must give more attention to her appearance and affect when interacting with her faceless audience.
+-->
+</div>
+<div id="v.-limitations" class="section level1">
+<h1><strong>V. LIMITATIONS</strong></h1>
+<p><svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1.71em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg> Race, ethnicity, and an avatar’s perceived race, etc. were not considered in the scope of this study. <br>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1.5em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M112 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-31 31L112 78.1l7-7c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-7 7 15.2 15.2C187.7 107.6 220.5 96 256 96s68.3 11.6 94.9 31.2l68.8-68.8-31-31c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9h96c8.8 0 16 7.2 16 16v96c0 6.5-3.9 12.3-9.9 14.8s-12.9 1.1-17.4-3.5l-31-31-68.8 68.8C404.4 187.7 416 220.5 416 256c0 80.2-59 146.6-136 158.2V432h16c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v8c0 13.3-10.7 24-24 24s-24-10.7-24-24v-8H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h16V414.2C155 402.6 96 336.2 96 256c0-35.5 11.6-68.3 31.2-94.9L112 145.9l-7 7c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l7-7L58.3 92.3l-31 31c-4.6 4.6-11.5 5.9-17.4 3.5S0 118.5 0 112V16C0 7.2 7.2 0 16 0h96zM352 256a96 96 0 1 0 -192 0 96 96 0 1 0 192 0z"/></svg> VTubers and streamers who are nonbinary, transgender, or conceal their gender identity <em>were</em> considered but were not a focus.<br>
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1.71em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M160 80c0-26.5 21.5-48 48-48h32c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V80zM0 272c0-26.5 21.5-48 48-48H80c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V272zM368 96h32c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48V144c0-26.5 21.5-48 48-48z"/></svg> Lack of empirical, statistical research on sexism as experienced by Virtual YouTubers compared to their real-person counterparts.</p>
+<center>
+<div class="figure">
+<img src="https://cdn.discordapp.com/attachments/630951620091576342/1102672689782595715/temma.png" style="width:70.0%" alt="" />
+<p class="caption">The Nijisanji VTuber Kishido Temma interacting with his audience on a “free talk” stream.</p>
+</div>
+</center>
+<hr>
+<!-- For some reason this wouldn't display with markdown syntax? lol -->
+<p>Male VTubers were not considered in this study as information about male streamers and VTubers did not appear during the research process, and audience interaction with male streamers was not a focusof the initial research question. I was more interested in how livestreaming – a career that requires hefty amounts of affective labor and technical skill – intersects with sexism which is rampant in gaming spaces.</p>
+<p>The VTubers I focused on in my study were also primarily conventionally attractive <strong>bishōjo</strong> type characters with light skin and Japanese, Asian, ambiguously white, or raceless nonhuman characters.</p>
+<!--
+
+This research does not account for other factors that intersect with gender like race, ethnicity, or an avatar's perceived race. 
+
+Many VTuber avatars of employed streamers also appear white, ambiguously East Asian, or they are nonhuman and raceless fantasy creatures. Male, nonbinary, and VTubers who conceal or use an avatar with a gender not congruent to their own were not considered in my research as they were outside of my scope.
+
+Additionally, this research was not empirical in nature and is merely a synthesized analysis of multiple disciplines of a recent Internet phenomenon. The definition of VTubers is always evolving and growing with PNGTubers and furry VTubers as recent additions to the community.
+-->
+</div>
+<div id="vi.-future-directions" class="section level1">
+<h1><strong>VI. FUTURE DIRECTIONS</strong></h1>
+<p><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1.5em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg> What role do factors like race and age play in streaming as a Virtual YouTuber?<br>
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1.71em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M160 80c0-26.5 21.5-48 48-48h32c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V80zM0 272c0-26.5 21.5-48 48-48H80c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V272zM368 96h32c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48V144c0-26.5 21.5-48 48-48z"/></svg> What would an empirical study on VTubers and sexism demonstrate?<br>
+<!--`<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#FFC629;overflow:visible;position:relative;"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>`{=html} Do VTubers powered by AI neural networks such as Neuro-sama show a glimpse into the future of streaming, or are they just a passing fad?<br>-->
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1.71em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M181.3 32.4c17.4 2.9 29.2 19.4 26.3 36.8L197.8 128h95.1l11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3s29.2 19.4 26.3 36.8L357.8 128H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H347.1L325.8 320H384c17.7 0 32 14.3 32 32s-14.3 32-32 32H315.1l-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8l9.8-58.7H155.1l-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8L90.2 384H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h68.9l21.3-128H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h68.9l11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3zM187.1 192L165.8 320h95.1l21.3-128H187.1z"/></svg> Are independent VTubers – those not affiliated with an agency – held to the same standards?</p>
+<!--Future research would benefit from focusing on the previously mentioned factors that were overlooked. As this project focused on analyzing and synthesizing current research, a proper empirical study on real-person streamers, VTubers, and audience interaction is necessary as the phenomenon continues to evolve. Other phenomena such as the VTuber Neuro-sama, who is powered by a neural network, are also deserving of scholarly attention as AI tools are becoming increasingly available to the public.
+
+The role of race in real-person streaming has been long established, but the role of the perceived race of a simulated avatar was not explored as in-depth I would have liked.-->
+</div>
+<div id="vii.-contact-further-reading" class="section level1">
+<h1><strong>VII. CONTACT &amp; FURTHER READING</strong></h1>
+<center>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1.5em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg> cjong1227 @ gmail.com<br> <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1.71em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80zM64 96v64h64V96H64zM0 336c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V336zm64 16v64h64V352H64zM304 32h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H304c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48zm80 64H320v64h64V96zM256 304c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s7.2-16 16-16s16 7.2 16 16v96c0 8.8-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s-7.2-16-16-16s-16 7.2-16 16v64c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V304zM368 480a16 16 0 1 1 0-32 16 16 0 1 1 0 32zm64 0a16 16 0 1 1 0-32 16 16 0 1 1 0 32z"/></svg> Scan the code for references and more info! <br> <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1.2em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg> Created in RStudio with posterdown</th>
+<th><img src="https://cdn.discordapp.com/attachments/630951620091576342/1103360099969417238/urop-vtuber-qr.png" style="width:45.0%" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</center>
+<!--
+`<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>`{=html} **Email:** cjong1227@gmail.com<br>
+`<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M128 0C110.3 0 96 14.3 96 32V224h96V192c0-35.3 28.7-64 64-64H480V32c0-17.7-14.3-32-32-32H128zM256 160c-17.7 0-32 14.3-32 32v32h96c35.3 0 64 28.7 64 64V416H576c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32H256zm240 64h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H496c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zM64 256c-17.7 0-32 14.3-32 32v13L187.1 415.9c1.4 1 3.1 1.6 4.9 1.6s3.5-.6 4.9-1.6L352 301V288c0-17.7-14.3-32-32-32H64zm288 84.8L216 441.6c-6.9 5.1-15.3 7.9-24 7.9s-17-2.8-24-7.9L32 340.8V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V340.8z"/></svg>`{=html} **Sign up to get the full thesis:** https://waa.ai/vtuber-thesis <br>
+`<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#49406E;overflow:visible;position:relative;"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>`{=html} Created in RStudio
+
+<center>
+![](https://media.discordapp.net/attachments/630951620091576342/1100603419963686922/uci16_UROP_2l_blue.png){width=50%}
+--->
+</center>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>

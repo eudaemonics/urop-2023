@@ -1,0 +1,176 @@
+---
+title: "Sexism, Streamers, and Simulated Avatars"
+author:
+  - name: Cosette "Coventine" Ong (Researcher, School of Social Sciences)
+  - name: <br>Katie Salen Tekinbaş (Faculty Advisor, School of Informatics)
+  
+author_textcol: "#FFC629"
+titletext_fontfamily: "Raleway"
+
+title_textsize: "120pt"
+author_textsize: "45pt"
+affiliation_textsize: "15pt"
+logoright_name: https&#58;/upload.wikimedia.org/wikipedia/en/thumb/0/0e/University_of_California%2C_Irvine_seal.svg/300px-University_of_California%2C_Irvine_seal.svg.png
+logoleft_name: https&#58;/cdn.discordapp.com/attachments/630951620091576342/1104224381917470780/UROP-Logo-UCI-Blue-Letters.png
+
+primary_colour: "#49406E" # purple  
+secondary_colour: "#FFC629" # yellow #FFC629
+accent_colour: "#829CE5" # blue
+
+body_textsize: "30pt"
+column_numbers: 3
+columnline_style: "dotted"
+sectitle_textsize: "40pt"
+
+poster_height: "36in"
+poster_width: "48in"
+font_family: 'Open Sans'
+
+output: 
+  posterdown::posterdown_html:
+    self_contained: false
+    knit: pagedown::chrome_print
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(fontawesome)
+```
+
+```{css, echo=FALSE}
+p.caption {
+ margin-top: 0;
+ margin-bottom: 0;
+ font-size: 24pt;
+ /*font-style: italic;*/
+}
+
+img {
+margin-top: 1pt;
+margin-bottom: 0;
+}
+
+/*.title_container{
+padding: 10px 15px;
+}
+
+#title{
+text-align:left;
+float:left;
+}
+
+#author{
+text-align:left;
+float:left;
+}*/
+
+hr{
+  width: 25%;
+}
+
+```
+
+# **I. BACKGROUND**
+<center>
+![A selection of women livestreamers and VTubers. From left to right: The VTubers Kizuna AI and Ironmouse and the real-person streamers Snapscube and Pokimane.](https://cdn.discordapp.com/attachments/630951620091576342/1104224382202679406/vtuber_figure.png){width=90%}
+</center>
+
+---
+
+| Livestreaming has expanded greatly in the last decade as a medium of entertainment and community growth. Accompanying its growth is the trend of Virtual YouTubers beginning with the debut of Kizuna AI in 2016. Virtual YouTubers are referred to colloquially as **VTubers** and are livestreamers that use 2D or 3D avatars and face-tracking technology to communicate with and entertain their audience.
+|    VTubers use a simulated avatar instead of a camera and are operated by a real person -- a **nakanohito**. Their audience only interacts with the avatar and with this imbalance in mind, we set out to answer the following questions:
+
+1) **How is sexism experienced differently by real-person streamers and VTubers?**
+2) **What factors contribute to these differences in experience?**
+
+# **II. SIGNIFICANCE**
+Streaming plays an important role in the modern Internet as a method of communication and entertainment. The recent COVID-19 pandemic has emphasized its importance by connecting people across time and space during a time when many were isolated.
+<center>
+![The Nijisanji VTuber Finana Ryugu playing a game on a livestream.](https://cdn.discordapp.com/attachments/630951620091576342/1100582068058075146/finana.png){width=60%}
+</center>
+
+---
+
+VTubers first appeared in 2016 and they are an evolution of how we use avatars to communicate in a digital medium and a new way to stand out in the oversaturated **attention economy**. Understanding how an audience interacts with the avatar without seeing the nakanohito is necessary as the real and digital worlds becoming increasingly intertwined.
+
+# **III. FINDINGS** 
+<center>
+![The double bind of streaming as a VTuber or a real-person streamer.](https://cdn.discordapp.com/attachments/630951620091576342/1105005489873485854/double_bind_figure.png){width=65%}
+
+---
+`r fa("fas fa-circle-exclamation", fill = "#C99CE6", width="1.5em", prefer_type = c("solid"))` **Real-person streamers and VTubers are both targeted by ambivalent sexism, but VTubers seem to be treated more favorably than their real-person counterparts when they conform to audience and gendered expectations. However, they are targeted by hostile sexism if they deviate from expectations.**
+</center>
+
+# **IV. DISCUSSION**
+
+`r fa("fas fa-user-plus", fill = "#8DA5E7", width="1.5em", prefer_type = c("solid"))` VTubers' behaviors were seen as more endearing or positive even when their actions were identical to real-person counterparts.<br> 
+`r fa("fas fa-user-plus", fill = "#8DA5E7", width="1.5em", prefer_type = c("solid"))` Because they are seen as fictional, female VTubers are not seen as invaders in spaces belonging to gamers.<br>
+`r fa("fas fa-user-minus", fill = "#D9618C", width="1.5em", prefer_type = c("solid"))` VTubers *are* targeted if they deviate in a way that is incongruent with their avatar's established character or if they deviate from standards in a way their audience disapproves of.<br>
+`r fa("fas fa-user-minus", fill = "#D9618C",width="1.5em",prefer_type = c("solid"))` Real-person streamers are judged more negatively than their VTuber counterparts regardless of if they conform or deviate from gendered expectations.
+
+The amount of **affective and emotional labor** that streamers need to be successful is amplified when a streamer is a woman. Moderating one's appearance and engaging their audience in a warm and welcoming manner to foster **parasocial relationships** between the audience and the streamer is vital to a streamer's success. However, female streamers are in a **double bind** where they are are judged regardless of how they behave and perform on camera.
+
+VTubers do not show their face to their audience, but there is still an imbalance because the audience is in a PSR with the avatar and not the nakanohito. Violating an audience's expectations can lead to a VTuber being targeted by hostile sexism.
+
+<!--
+Women have played a significant role in streaming but are held to higher standards than their male counterparts. On streaming platforms such as Twitch and YouTube, it's common for gaming skills to be assumed based on gender. Streaming as a full-time career depends almost entirely on **affective and emotional labor** and more labor is expected of women. Some female streamers that stream full-time are assumed to be cold or unfriendly if they do not dress properly, do not wear makeup, or do not address their audience in a warm and welcoming manner. 
+
+VTubers can be of any gender, but female avatars have much more freedom. Some viewers feel inclined to tip VTubers than real streamers because they find real-person streamers self-centered. VTubers only exist in the digital realm, so there is more of a disconnect between reality and the virtual. **Parasocial relationships and interactions** are fundamental to sustain all streaming careers an audience has a PSR with the *avatar* and not the nakanohito when it comes to VTubers.
+
+Unlike real-person streamers who are in a **double bind** where they are punished by their audience regardless of their behavior, female VTubers have much more freedom to act how they want. Their audience seems more likely to attribute their behavior to their persona as an avatar rather than the nakanohito's personality and true opinions. A woman choosing to be on camera means she must give more attention to her appearance and affect when interacting with her faceless audience.
+-->
+
+# **V. LIMITATIONS**
+
+`r fa("fas fa-user", fill = "#49406E", width="1.5em", prefer_type = c("solid"))` Race, ethnicity, and an avatar's perceived race, etc. were not considered in the scope of this study. <br>
+`r fa("fas fa-transgender", fill = "#49406E", width="1.5em", prefer_type = c("solid"))` VTubers and streamers who are nonbinary, transgender, or conceal their gender identity *were* considered but were not a focus.<br>
+`r fa("fas fa-chart-simple", fill = "#49406E", width="1.5em", prefer_type = c("solid"))` Lack of empirical, statistical research on sexism as experienced by Virtual YouTubers compared to their real-person counterparts.
+
+<center>
+![The Nijisanji VTuber Kishido Temma interacting with his audience on a "free talk" stream.](https://cdn.discordapp.com/attachments/630951620091576342/1102672689782595715/temma.png){width=70%}
+</center>
+
+<hr> <!-- For some reason this wouldn't display with markdown syntax? lol -->
+
+Male VTubers were not considered in this study as information about male streamers and VTubers did not appear during the research process, and audience interaction with male streamers was not a focusof the initial research question. I was more interested in how livestreaming -- a career that requires hefty amounts of affective labor and technical skill -- intersects with sexism which is rampant in gaming spaces.
+
+The VTubers I focused on in my study were also primarily conventionally attractive **bishōjo** type characters with light skin and Japanese, Asian, ambiguously white, or raceless nonhuman characters.
+
+<!--
+
+This research does not account for other factors that intersect with gender like race, ethnicity, or an avatar's perceived race. 
+
+Many VTuber avatars of employed streamers also appear white, ambiguously East Asian, or they are nonhuman and raceless fantasy creatures. Male, nonbinary, and VTubers who conceal or use an avatar with a gender not congruent to their own were not considered in my research as they were outside of my scope.
+
+Additionally, this research was not empirical in nature and is merely a synthesized analysis of multiple disciplines of a recent Internet phenomenon. The definition of VTubers is always evolving and growing with PNGTubers and furry VTubers as recent additions to the community.
+-->
+
+# **VI. FUTURE DIRECTIONS**
+
+`r fa("fas fa-circle-question", fill = "#49406E", width="1.5em", prefer_type = c("solid"))` What role do factors like race and age play in streaming as a Virtual YouTuber?<br>
+`r fa("fas fa-chart-simple", fill = "#49406E", width="1.5em", prefer_type = c("solid"))` What would an empirical study on VTubers and sexism demonstrate?<br>
+<!--`r fa("fas fa-circle-question", fill = "#FFC629", prefer_type = c("solid"))` Do VTubers powered by AI neural networks such as Neuro-sama show a glimpse into the future of streaming, or are they just a passing fad?<br>-->
+`r fa("fas fa-hashtag", fill = "#49406E", width="1.5em", prefer_type = c("solid"))` Are independent VTubers -- those not affiliated with an agency -- held to the same standards?
+
+<!--Future research would benefit from focusing on the previously mentioned factors that were overlooked. As this project focused on analyzing and synthesizing current research, a proper empirical study on real-person streamers, VTubers, and audience interaction is necessary as the phenomenon continues to evolve. Other phenomena such as the VTuber Neuro-sama, who is powered by a neural network, are also deserving of scholarly attention as AI tools are becoming increasingly available to the public.
+
+The role of race in real-person streaming has been long established, but the role of the perceived race of a simulated avatar was not explored as in-depth I would have liked.-->
+
+
+# **VII. CONTACT & FURTHER READING**
+<center>
+|`r fa("fas fa-envelope", fill = "#49406E", width="1.5em", prefer_type = c("solid"))` cjong1227 @ gmail.com<br> `r fa("fas fa-qrcode", fill = "#49406E", width="1.5em", prefer_type = c("solid"))` Scan the code for references and more info! <br> `r fa("fas fa-code", fill = "#49406E", width="1.5em", prefer_type = c("solid"))` Created in RStudio with posterdown  |  ![](https://cdn.discordapp.com/attachments/630951620091576342/1103360099969417238/urop-vtuber-qr.png){width=45%}	|
+|---	|---	|
+</center>
+
+<!--
+`r fa("fas fa-at", fill = "#49406E", prefer_type = c("solid"))` **Email:** cjong1227@gmail.com<br>
+`r fa("fas fa-envelopes-bulk", fill = "#49406E", prefer_type = c("solid"))` **Sign up to get the full thesis:** https://waa.ai/vtuber-thesis <br>
+`r fa("fas fa-code", fill = "#49406E", prefer_type = c("solid"))` Created in RStudio
+
+<center>
+![](https://media.discordapp.net/attachments/630951620091576342/1100603419963686922/uci16_UROP_2l_blue.png){width=50%}
+--->
+</center>
+
